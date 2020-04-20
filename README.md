@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/QYPD2ny.png">
+</p>
+
 With 4 diamonds, you can stabilize an ender pearl so that it doesn't shatter when thrown! The crafting recipe can be configured.
 
 <p align="center">
