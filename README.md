@@ -2,12 +2,12 @@ With 4 diamonds, you can stabilize an ender pearl so that it doesn't shatter whe
 
 ![Usage](https://i.imgur.com/a6Yx0uo.gif)
 
-## Usage:
+## Usage
 Craft it! Throw it! Bop it!
 
 ![How to craft](https://i.imgur.com/kQp3CPp.png)
 
-## Config:
+## Config
 ```yaml
 # The crafting recipe
 recipe:
@@ -21,10 +21,10 @@ ingredients:
   E: ENDER_PEARL
 ```
 
-## Commands:
+## Commands
 **/rep** - Plugin info
 
 **/rep reload** - Reload config (OP)
 
-## Permissions:
+## Permissions
 rep.reload (OP)
