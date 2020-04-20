@@ -1,9 +1,9 @@
-# Usage:
+## Usage:
 With 4 diamonds, you can stabilize an ender pearl so that it doesn't shatter when thrown! The crafting recipe can be configured.
 
 ![How to craft](https://i.imgur.com/kQp3CPp.png)  
 
-# Config:
+## Config:
 ```yaml
 # The crafting recipe
 recipe:
@@ -17,10 +17,10 @@ ingredients:
   E: ENDER_PEARL
 ```
 
-# Commands:
+## Commands:
 **/rep** - Plugin info
 
 **/rep reload** - Reload config (OP)
 
-# Permissions:
+## Permissions:
 rep.reload (OP)
