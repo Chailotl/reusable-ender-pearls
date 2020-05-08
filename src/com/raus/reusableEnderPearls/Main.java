@@ -46,7 +46,7 @@ public class Main extends JavaPlugin
 		meta.setDisplayName(ChatColor.RESET + "Stable Ender Pearl");
 		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		meta.addEnchant(Enchantment.LURE, 1, false); // Make it glow
-		meta.getPersistentDataContainer().set(key, PersistentDataType.STRING, "stable");
+		meta.getPersistentDataContainer().set(key, PersistentDataType.INTEGER, 1);
 		item.setItemMeta(meta);
 		
 		// Read config

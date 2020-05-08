@@ -46,14 +46,11 @@ public class ThrowListener implements Listener
 			PersistentDataContainer container = meta.getPersistentDataContainer();
 
 			// Is it our custom ender pearl?
-			if (container.has(Main.key, PersistentDataType.STRING))
+			if (container.has(Main.key, PersistentDataType.INTEGER))
 			{
-			    if (container.get(Main.key, PersistentDataType.STRING).equals("stable"))
-			    {
-			    	// Mark player as having thrown a stable ender pearl
-			    	int count = thrownPearls.containsKey(ply.getUniqueId()) ? thrownPearls.get(ply.getUniqueId()) : 0;
-			    	thrownPearls.put(ply.getUniqueId(), count + 1);
-			    }
+		    	// Mark player as having thrown a stable ender pearl
+		    	int count = thrownPearls.containsKey(ply.getUniqueId()) ? thrownPearls.get(ply.getUniqueId()) : 0;
+		    	thrownPearls.put(ply.getUniqueId(), count + 1);
 			}
 		}
 	}
