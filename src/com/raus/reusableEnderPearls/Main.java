@@ -49,12 +49,34 @@ public class Main extends JavaPlugin
 		meta.getPersistentDataContainer().set(key, PersistentDataType.INTEGER, 1);
 		item.setItemMeta(meta);
 		
+		buildRecipe();
+	}
+	
+	@Override
+	public void onDisable()
+	{
+		
+	}
+	
+	public void rebuildRecipe()
+	{
+		// Remove old recipe
+		Bukkit.removeRecipe(Main.key);
+		
+		// Reload config
+		reloadConfig();
+		
+		buildRecipe();
+	}
+	
+	private void buildRecipe()
+	{
 		// Read config
 		List<String> list = getConfig().getStringList("recipe");
 		ConfigurationSection ingredients = getConfig().getConfigurationSection("ingredients");
 		
 		// Create recipe
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		ShapedRecipe recipe = new ShapedRecipe(Main.key, Main.item);
 		recipe.shape(list.get(0), list.get(1), list.get(2));
 		for (String str : ingredients.getKeys(false))
 		{
@@ -62,14 +84,7 @@ public class Main extends JavaPlugin
 		    recipe.setIngredient(str.charAt(0), Material.getMaterial(name));
 		}
 		
-		// Add recipe
+		// Replace recipe
 		Bukkit.addRecipe(recipe);
-	}
-	
-	@Override
-	public void onDisable()
-	{
-		// Remove recipe on disable
-		Bukkit.removeRecipe(key);
 	}
 }

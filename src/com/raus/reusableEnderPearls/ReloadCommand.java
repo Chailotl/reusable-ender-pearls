@@ -14,35 +14,36 @@ public class ReloadCommand implements CommandExecutor
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
-		if (args.length == 0 || !args[0].equals("reload"))
+		if (args.length == 0)
 		{
 			return false;
 		}
-		
-		// Reload config
-		Main main = Main.getInstance();
-		main.reloadConfig();
-		
-		// Read config
-		List<String> list = main.getConfig().getStringList("recipe");
-		ConfigurationSection ingredients = main.getConfig().getConfigurationSection("ingredients");
-		
-		// Create recipe
-		ShapedRecipe recipe = new ShapedRecipe(Main.key, Main.item);
-		recipe.shape(list.get(0), list.get(1), list.get(2));
-		for (String str : ingredients.getKeys(false))
+		else if (args[0].equals("info"))
 		{
-		    String name = main.getConfig().getString("ingredients." + str);
-		    recipe.setIngredient(str.charAt(0), Material.getMaterial(name));
+			// Send message
+			sender.sendMessage(ChatColor.DARK_PURPLE + "[REP]" + ChatColor.GRAY + " Version " + plugin.getDescription().getVersion());
+			return true;
 		}
-		
-		// Replace recipe
-		Bukkit.removeRecipe(Main.key);
-		Bukkit.addRecipe(recipe);
-		
-		// Send message
-		sender.sendMessage(ChatColor.DARK_PURPLE + "[REP]" + ChatColor.GRAY + " Config reloaded!");
-		
-		return true;
+		else if (args[0].equals("reload"))
+		{
+			if (!sender.hasPermission("pipes.reload"))
+			{
+				// Send message
+				sender.sendMessage(ChatColor.DARK_PURPLE + "[REP]" + ChatColor.RED + " You do not have permission to run this command.");
+				return true;
+			}
+			
+			// Reload config
+			plugin.rebuildRecipe();
+			
+			// Send message
+			sender.sendMessage(ChatColor.DARK_PURPLE + "[REP]" + ChatColor.GRAY + " Config reloaded!");
+			
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
