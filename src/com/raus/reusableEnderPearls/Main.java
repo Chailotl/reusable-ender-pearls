@@ -1,4 +1,5 @@
 package com.raus.reusableEnderPearls;
+
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -19,18 +20,6 @@ public class Main extends JavaPlugin
 {
 	public static NamespacedKey key;
 	public static ItemStack item;
-	
-	private static Main instance;
-
-	public Main()
-	{
-		instance = this;
-	}
-
-	public static Main getInstance()
-	{
-		return instance;
-	}
 	
 	@Override
 	public void onEnable()

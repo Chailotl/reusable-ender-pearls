@@ -1,19 +1,16 @@
 package com.raus.reusableEnderPearls;
 
-import java.util.List;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.ChatColor;
 
 public class ReloadCommand implements CommandExecutor
 {
+	private Main plugin = JavaPlugin.getPlugin(Main.class);
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
