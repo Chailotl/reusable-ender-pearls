@@ -1,0 +1,18 @@
+name: ReusableEnderPearls
+description: Reusable ender pearls
+author: Raus
+main: com.raus.reusableEnderPearls.Main
+version: 1.0
+api-version: 1.15
+
+commands:
+  rep:
+    description: Reusable ender pearls info
+    default: true
+    usage: /rep reload
+    permission: rep.reload
+
+permissions:
+  rep.reload:
+    default: op
+    description: Allows you to reload the config
