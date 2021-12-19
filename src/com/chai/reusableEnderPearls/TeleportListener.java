@@ -1,4 +1,4 @@
-package com.raus.reusableEnderPearls;
+package com.chai.reusableEnderPearls;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

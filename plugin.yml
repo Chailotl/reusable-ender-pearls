@@ -1,7 +1,7 @@
 name: ReusableEnderPearls
 description: Reusable ender pearls
-author: Raus
-main: com.raus.reusableEnderPearls.Main
+author: Chai
+main: com.chai.reusableEnderPearls.Main
 version: 1.0
 api-version: 1.15
 

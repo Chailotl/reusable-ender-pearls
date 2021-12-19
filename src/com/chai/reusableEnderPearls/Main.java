@@ -1,4 +1,4 @@
-package com.raus.reusableEnderPearls;
+package com.chai.reusableEnderPearls;
 
 import java.util.List;
 

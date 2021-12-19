@@ -1,4 +1,4 @@
-package com.raus.reusableEnderPearls;
+package com.chai.reusableEnderPearls;
 
 import java.util.HashMap;
 import java.util.UUID;

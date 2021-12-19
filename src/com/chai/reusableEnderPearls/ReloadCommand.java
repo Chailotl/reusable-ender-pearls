@@ -1,4 +1,4 @@
-package com.raus.reusableEnderPearls;
+package com.chai.reusableEnderPearls;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
