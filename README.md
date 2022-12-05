@@ -5,13 +5,13 @@
 With 4 diamonds, you can stabilize an ender pearl so that it doesn't shatter when thrown! The crafting recipe can be configured.
 
 <p align="center">
-  <img src="https://i.imgur.com/a6Yx0uo.gif">
+  <img src="https://i.imgur.com/">
 </p>
 
 ## Usage
 Craft it! Throw it! Bop it!
 
-![How to craft](https://i.imgur.com/kQp3CPp.png)
+![How to craft](https://i.imgur.com/)
 
 ## Config
 ```yaml
